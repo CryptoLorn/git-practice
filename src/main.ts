@@ -12,6 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/users", userRouter);
 app.use("/auth", authRouter);
+app.use("/", (req, res, next) => {
+  console.log("Default request!");
+});
 
 app.use(
   "*",
@@ -26,4 +29,5 @@ app.listen(config.port, async () => {
   await mongoose.connect(config.mongoUri);
   console.log("some changed");
   console.log(`Server has been started on port ${config.port}`);
+  console.log("Add default request");
 });
