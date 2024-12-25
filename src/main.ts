@@ -24,6 +24,6 @@ app.use(
 
 app.listen(config.port, async () => {
   await mongoose.connect(config.mongoUri);
-  console.log("some changed");
+  console.log("Go ahead");
   console.log(`Server has been started on port ${config.port}`);
 });
