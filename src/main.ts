@@ -21,10 +21,6 @@ app.use(
     res.status(status).json({ status, message });
   },
 );
-process.on("uncaughtException", (error) => {
-  console.error("Uncaught Exception", error.message);
-  process.exit(1);
-});
 
 app.listen(config.port, async () => {
   await mongoose.connect(config.mongoUri);
