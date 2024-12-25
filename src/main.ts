@@ -10,10 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello world");
-});
-
 app.use("/users", userRouter);
 app.use("/auth", authRouter);
 

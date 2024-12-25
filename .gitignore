@@ -2,3 +2,5 @@
 node_modules
 dist
 .env
+may-2024-nodejs.iml
+package-lock.json
